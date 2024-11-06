@@ -61,7 +61,10 @@ botao.addEventListener("click", function (event) {
     pagina.classList.toggle("modo-noturno");
     //programe aqui uma condicional que verifique se a classe "modo-noturno" está aplicada a página, e se estiver o texto no botao deverá mudar para "Desativar". Caso contrário deverá mostrar "Ativar"
 
-    if (f){
-
+    //Usando classList.contains, ou poderia usar className
+    if (pagina.classList.contains("modo-noturno")) {
+        botao.innerHTML = "Desativar";
+    } else {
+        botao.innerHTML = "Ativar";
     }
 });
